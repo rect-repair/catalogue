@@ -6,8 +6,8 @@
 
 body {
     font-family: 'IBMVGA8', monospace;
-    background-color: #f5f4ed;
-    color: #000000;
+    background-color: #ffffff;
+    color: #ff0000;
     line-height: 1.2;
     font-size: 30px;
 }
@@ -18,15 +18,19 @@ body {
 
 /* Color classes for different item types */
 .street-item {
-    color: #009100 !important; /* Green for 街面上 */
+    color: #00ff00 !important; /* Green for 街面上 */
 }
 
 .interface-item {
-    color: #003584 !important; /* Blue for 界面下 */
+    color: #0008ff !important; /* Blue for 界面下 */
 }
 
 .tea-room-item {
-    color: #8c0000 !important; /* Red for 茶水间 */
+    color: #d90000 !important; /* Red for 茶水间 */
+}
+
+.upcoming-item{
+    color: #cdcdcd !important;
 }
 
 .column-header {
@@ -101,7 +105,7 @@ body {
 }
 
 .item:hover {
-    background-color: #f0fa0e;
+    background-color: #fbff0f;
     color: #fe0000;
     border-bottom: 1px solid #000000;
 }
