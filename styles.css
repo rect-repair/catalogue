@@ -101,8 +101,8 @@ body {
 }
 
 .item:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #f0fa0e;
+    color: #fe0000;
     border-bottom: 1px solid #000000;
 }
 
