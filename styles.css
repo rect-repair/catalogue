@@ -128,10 +128,6 @@ body {
         padding: 15px;
     }
     
-    /* Hide the participants column on mobile */
-    .column:nth-child(2) {
-        display: none;
-    }
     
     /* Add participant numbers inline with game items */
     .games-item {
