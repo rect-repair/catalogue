@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBMVGA8', monospace;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.2;
+    font-size: 30px;
+}
+
+.chinese {
+    font-family: "PingFang SC", serif;
+}
+
+/* Color classes for different item types */
+.street-item {
+    color: #009100 !important; /* Green for 街面上 */
+}
+
+.interface-item {
+    color: #003584 !important; /* Blue for 界面下 */
+}
+
+.tea-room-item {
+    color: #8c0000 !important; /* Red for 茶水间 */
+}
+
+.column-header {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    border-bottom: 1px solid #000000;
+    font-size: 30px;
+    font-family: 'IBMVGA8', monospace;
+    color: #000000;
+    background: none;
+    cursor: default;
+    font-weight: bold;
+    height: 50px;
+}
+
+.participant-inline {
+    margin-bottom: 0;
+    display: flex;
+    align-items: baseline;
+    font-family: 'IBMVGA8', monospace;
+    color: #9d9d9d;
+    background: none;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.header-right {
+    text-align: right;
+    font-family: 'IBMVGA8', monospace;
+    color: #9d9d9d;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid #000000;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border-right: 1px solid #000000;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.item {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background: none;
+    padding: 8px 20px;
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+.item:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 1px solid #000000;
+}
+
+.number {
+    font-weight: bold;
+    margin-right: 12px;
+    min-width: 30px;
+}
+
+.title {
+    flex: 1;
+    letter-spacing: 0.5px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .column {
+        padding: 15px;
+    }
+    
+    /* Hide the participants column on mobile */
+    .column:nth-child(2) {
+        display: none;
+    }
+    
+    /* Add participant numbers inline with game items */
+    .games-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    .participant-inline {
+        font-size: 20px;
+        color: #666;
+        margin-left: 10px;
+    }
+}
+
+/* Logo */
+.logo {
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fe0101;
+}
