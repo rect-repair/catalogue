@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'IBMVGA8', monospace;
+    font-family: "Pixolde", sans-serif;
     background-color: #ffffff;
     color: #ff0000;
     line-height: 1.2;
@@ -18,15 +18,15 @@ body {
 
 /* Color classes for different item types */
 .street-item {
-    color: #00ff00 !important; /* Green for 街面上 */
+    color: #000000 !important; /* Green for 街面上 */
 }
 
 .interface-item {
-    color: #0008ff !important; /* Blue for 界面下 */
+    color: #000000 !important; /* Blue for 界面下 */
 }
 
 .tea-room-item {
-    color: #d90000 !important; /* Red for 茶水间 */
+    color: #000000 !important; /* Red for 茶水间 */
 }
 
 .upcoming-item{
