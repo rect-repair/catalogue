@@ -82,47 +82,46 @@
                 <span class="header-right"></span>
             </div>
             <a href="#" class="item upcoming-item">
-                <span class="number">25/10/19 </span>
+                <span class="number" id="countdown">25/10/19</span>
                 <span class="title">Shanghai🤝New York Game Swap with boshi's place</span>
                 <span class="participant-inline"></span>
             </a>
 
             <a href="https://mp.weixin.qq.com/s/5RkqtzcWWvYntD__9ONUtQ" class="item street-item">
-                <span class="number">25/09/26 街面上[2]</span>
-                <span class="title">FIRST青年电影中心</span>
+                <span class="number">25/09/26</span>
+                <span class="title">街面上[2]: FIRST青年电影中心<br>on the street[2]: FIRST International Film Festival</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://rect-repair.github.io/jiemianxia/computer-garden.html" target="_blank" class="item interface-item">
-                <span class="number">25/09/21 界面下[1]
-                </span>
-                <span class="title">我的电脑是一座花园</span>
+                <span class="number">25/09/21</span>
+                <span class="title">界面下[1]: 我的电脑是一座花园 <br>Beneath the Interface[1]: My Computer is a Garden</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://www.xiaohongshu.com/explore/68c2ea0a000000001c032653?xsec_token=ABdTrodaQHpjeLvdbwG3vk-GbHS9ZVomy5nR63Qjmfddw=&xsec_source=pc_user" class="item street-item">
-                <span class="number">25/09/13 街面上[1]</span>
-                <span class="title">上海市长宁区新华路345弄蓝色运动场</span>
+                <span class="number">25/09/13</span>
+                <span class="title">街面上[1]: 上海市长宁区新华路345弄蓝色运动场<br>on the street[1]: Blue Stadium in Xuhui District, Shanghai</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://rect-repair.github.io/tea-room/tea-room-archive.html#:~:text=茶水间[4]" target="_blank" class="item tea-room-item">
-                <span class="number">25/09/13 茶水间[4]</span>
-                <span class="title"></span>
+                <span class="number">25/09/13</span>
+                <span class="title">茶水间[4]<br>tea room[4]</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://rect-repair.github.io/tea-room/tea-room-archive.html#:~:text=茶水间[3]" target="_blank"
                 class="item tea-room-item">
-                <span class="number">25/08/09 茶水间[3]</span>
-                <span class="title"></span>
+                <span class="number">25/08/09</span>
+                <span class="title">茶水间[3]<br>tea room[3]</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://html-energy-shanghai-2025.yufeng.place/" class="item interface-item">
-                <span class="number">25/08/01 界面下[0]</span>
-                <span class="title">HTML DAY 2025</span>
+                <span class="number">25/08/01</span>
+                <span class="title">界面下[0]: HTML DAY 2025<br>beneath the interface[0]: HTML DAY 2025</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://rect-repair.github.io/tea-room/tea-room-archive.html#:~:text=茶水间[2]" target="_blank"
                 class="item tea-room-item">
-                <span class="number">25/07/04 茶水间[2]</span>
-                <span class="title"></span>
+                <span class="number">25/07/04</span>
+                <span class="title">茶水间[2]<br>tea room[2]</span>
                 <span class="participant-inline"></span>
             </a>
             <a href="https://etherpad.p2pu.org/p/bitsy-jam-keep" target="_blank"
@@ -133,15 +132,47 @@
             </a>
             <a href="https://rect-repair.github.io/tea-room/tea-room-archive.html#:~:text=茶水间[1]" target="_blank"
                 class="item tea-room-item">
-                <span class="number">25/04/03 茶水间[1]</span>
-                <span class="title"></span>
+                <span class="number">25/04/03</span>
+                <span class="title">茶水间[1]<br>tea room[1]</span>
                 <span class="participant-inline"></span>
             </a>
         </div>
         </div>
     </div>
 
+    <footer class="copyright">
+        <p>©2025 [[rect*]]repair</p>
+    </footer>
+
     <script>
+        // Countdown timer for the event
+        function updateCountdown() {
+            const targetDate = new Date('2025-10-19T00:00:00');
+            const now = new Date();
+            const timeLeft = targetDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                const countdownElement = document.getElementById('countdown');
+                if (countdownElement) {
+                    countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+            } else {
+                const countdownElement = document.getElementById('countdown');
+                if (countdownElement) {
+                    countdownElement.textContent = 'Event Started!';
+                }
+            }
+        }
+        
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
         // Add some interactive behavior
         document.querySelectorAll('.item').forEach(item => {
             item.addEventListener('click', function(e) {
@@ -155,11 +186,6 @@
                 
                 console.log(`Clicked: ${number} - ${title}`);
                 
-                // Optional: Add a brief flash effect
-                this.style.transform = 'scale(0.98)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 100);
             });
         });
 
