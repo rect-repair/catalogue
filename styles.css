@@ -1,20 +1,3 @@
-@font-face {
-    font-family: 'Terminal Grotesque';
-    src: url('assets/fonts/terminal-grotesque.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Unifontexmono-DYWdE';
-    src: url('assets/fonts/Unifontexmono-DYWdE.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+F900-FAFF, U+2F800-2FA1F;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +5,6 @@
 }
 
 body {
-    font-family: "Terminal Grotesque", "Unifontexmono-DYWdE", sans-serif;
     background-color: #ffffff;
     color: #ff0000;
     line-height: 1.2;
@@ -30,7 +12,6 @@ body {
 }
 
 .chinese {
-    font-family: "Unifontexmono-DYWdE", "Songti SC", serif;
 }
 
 /* Color classes for different item types */
@@ -57,7 +38,6 @@ body {
     padding: 8px 4px;
     border-bottom: 1px solid #000000;
     font-size: 28px;
-    font-family: 'Terminal Grotesque', 'Unifontexmono-DYWdE', 'JetBrains Mono', 'IBMVGA8', monospace;
     color: #000000;
     background: none;
     cursor: default;
@@ -69,7 +49,6 @@ body {
     margin-bottom: 0;
     display: flex;
     align-items: baseline;
-    font-family: 'Terminal Grotesque', 'Unifontexmono-DYWdE', 'JetBrains Mono', 'IBMVGA8', monospace;
     color: #9d9d9d;
     background: none;
     text-align: right;
@@ -78,7 +57,6 @@ body {
 
 .header-right {
     text-align: right;
-    font-family: 'Terminal Grotesque', 'Unifontexmono-DYWdE', 'JetBrains Mono', 'IBMVGA8', monospace;
     color: #9d9d9d;
 }
 
@@ -117,12 +95,12 @@ body {
     background: none;
     padding: 2px 8px;
     border-bottom: 1px solid #000000;
-    font-weight: bold;
+    /* font-weight: bold; */
     min-height: 30px;
 }
 
 .item:hover {
-    background-color: #fbff0f;
+    background-color: #b8b8b8;
     color: #fe0000;
     border-bottom: 1px solid #000000;
 }
